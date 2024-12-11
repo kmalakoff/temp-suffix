@@ -1,1 +1,1 @@
-ignores: ["depcheck"]
+ignores: ["temp-suffix", "depcheck", "ts-dev-stack", "@types/*"]
