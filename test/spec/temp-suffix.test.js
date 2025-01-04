@@ -1,17 +1,17 @@
-var assert = require('assert');
+const assert = require('assert');
 
-var tempSuffix = require('../..');
+const tempSuffix = require('temp-suffix');
 
-describe('temp-suffix', function () {
-  it('should add a suffix', function () {
-    var tempFilename = tempSuffix(__filename);
+describe('temp-suffix', () => {
+  it('should add a suffix', () => {
+    const tempFilename = tempSuffix(__filename);
     assert.equal(tempFilename[__filename.length], '-');
-    var suffix = tempFilename.slice(__filename.length + 1);
+    const suffix = tempFilename.slice(__filename.length + 1);
     assert.ok(suffix.length > 0);
   });
 
-  it('should generate only a suffix', function () {
-    var suffix = tempSuffix();
+  it('should generate only a suffix', () => {
+    const suffix = tempSuffix();
     assert.ok(suffix.length > 0);
   });
 });
