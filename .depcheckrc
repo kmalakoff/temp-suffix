@@ -1,1 +1,1 @@
-ignores: ["depcheck"]
+ignores: ["temp-suffix", "@types/*", "@biomejs/*"]
