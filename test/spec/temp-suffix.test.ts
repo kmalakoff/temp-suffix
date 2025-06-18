@@ -1,8 +1,7 @@
 import assert from 'assert';
-import url from 'url';
-
 // @ts-ignore
 import tempSuffix from 'temp-suffix';
+import url from 'url';
 
 const ___filename = typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url);
 
