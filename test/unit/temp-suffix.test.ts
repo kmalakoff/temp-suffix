@@ -1,5 +1,4 @@
 import assert from 'assert';
-// @ts-ignore
 import tempSuffix from 'temp-suffix';
 import url from 'url';
 
