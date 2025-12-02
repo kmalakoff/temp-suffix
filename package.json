@@ -1,6 +1,6 @@
 {
   "name": "temp-suffix",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Adds a unique suffix to a string with process and thread uniqueness guarantees. Adapted from https://github.com/npm/write-file-atomic",
   "keywords": [
     "temp",
