@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "@biomejs/biome", "temp-suffix"]
+ignores: ["node-version-use", "ts-dev-stack", "temp-suffix"]
