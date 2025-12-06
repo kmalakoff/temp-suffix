@@ -1,1 +1,1 @@
-ignores: ["temp-suffix", "@types/*", "@biomejs/*"]
+ignores: ["node-version-use", "ts-dev-stack", "temp-suffix"]

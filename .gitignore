@@ -2,7 +2,17 @@
 node_modules/
 dist/
 docs/
-npm-debug.log
+npm-debug.log*
+.tmp/
+.cache/
+
+# agents
+.agents/
+AGENTS.md
+.claude/
+CLAUDE.md
+
+# local
 data/
 *.heapsnapshot
 *.0x
