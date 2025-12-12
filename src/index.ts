@@ -17,8 +17,8 @@ const threadId = (function getId() {
 })();
 
 let invocations = 0;
-export default function tempSuffix(prefix) {
-  const suffix = MurmurHash3(prefix || '')
+export default function tempSuffix(prefix?: string) {
+  const suffix = MurmurHash3(prefix === undefined ? '' : prefix)
     .hash(String(process.pid))
     .hash(String(threadId))
     .hash(String(++invocations))
