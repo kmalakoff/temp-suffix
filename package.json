@@ -1,6 +1,6 @@
 {
   "name": "temp-suffix",
-  "version": "0.1.6",
+  "version": "1.0.8",
   "description": "Adds a unique suffix to a string with process and thread uniqueness guarantees. Adapted from https://github.com/npm/write-file-atomic",
   "keywords": [
     "temp",
@@ -15,35 +15,39 @@
   },
   "license": "MIT",
   "author": "Kevin Malakoff <kmalakoff@gmail.com> (https://github.com/kmalakoff)",
-  "main": "dist/cjs/index.cjs",
-  "types": "dist/types/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/cjs/index.js",
+  "source": "src/index.ts",
+  "types": "dist/cjs/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsds build",
-    "deploy": "tsds deploy",
-    "docs": "tsds docs",
-    "format": "biome check --write --unsafe src/ test/",
+    "format": "tsds format",
+    "prepublishOnly": "tsds validate",
     "test": "tsds test:node --no-timeouts",
-    "test:engines": "nvu engines npm test",
+    "test:engines": "nvu engines tsds test:node --no-timeouts",
     "version": "tsds version"
   },
   "dependencies": {
     "imurmurhash": "^0.1.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.10.5"
+    "@types/node": "^25.0.1",
+    "node-version-use": "^2.1.5",
+    "ts-dev-stack": "^1.21.3",
+    "tsds-config": "^0.2.1"
   },
   "engines": {
     "node": ">=0.8"
-  },
-  "tsds": {
-    "source": "src/index.mjs",
-    "targets": [
-      "cjs"
-    ]
   }
 }
