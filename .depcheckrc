@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "temp-suffix"]
+ignores: ["temp-suffix", "node-version-use", "ts-dev-stack"]
